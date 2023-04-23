@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:system="clr-namespace:System;assembly=System.Runtime"
     xmlns:vm="using:AppViewModels"
     Title="AvaloniaApp"
     Width="400"
@@ -21,7 +22,13 @@
         <vm:MainWindowViewModel />
     </Design.DataContext>
 
+    <Window.Resources>
+        <system:String x:Key="MessageResouce">Hello😊🐶</system:String>
+    </Window.Resources>
+
     <DockPanel Margin="20">
+        <TextBlock DockPanel.Dock="Top" Text="{StaticResource MessageResouce}" />
+
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
             <CheckBox
                 VerticalAlignment="Center"

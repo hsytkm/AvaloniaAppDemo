@@ -31,6 +31,7 @@
 ## 味見での気づき
 
 - SinglePublish の Windows.exeファイルサイズが Avalonia: 86MByte, WPF: 155MByte で、Avalonia の方が 45% くらい縮んでいてビビった。
+- Avalonia だと Windows で絵文字がカラー表示される。
 
 ## References
 
