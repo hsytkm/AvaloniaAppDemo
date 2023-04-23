@@ -1,0 +1,66 @@
+<Window
+    x:Class="AvaloniaApp.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:AppViewModels"
+    Title="AvaloniaApp"
+    Width="400"
+    Height="300"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Icon="/Assets/avalonia-logo.ico"
+    mc:Ignorable="d">
+
+    <Design.DataContext>
+        <!--
+            This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs)
+        -->
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <DockPanel Margin="20">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <CheckBox
+                VerticalAlignment="Center"
+                Content="CanExecute"
+                IsChecked="{Binding IsEnableCountUp1, Mode=TwoWay}" />
+            <Button
+                Margin="20,0"
+                Padding="10,10"
+                Command="{Binding CountUp1Command}"
+                Content="CountUp Value1" />
+            <TextBlock VerticalAlignment="Center" Text="{Binding Value1, StringFormat='Value1 = &quot;{0}&quot;'}" />
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <TextBlock
+                Width="100"
+                VerticalAlignment="Center"
+                Text="{Binding SliderValue, StringFormat='Value2 = &quot;{0}&quot;'}" />
+            <Slider
+                Width="200"
+                Margin="10"
+                IsSnapToTickEnabled="True"
+                LargeChange="1"
+                Maximum="10"
+                Minimum="-10"
+                SmallChange="1"
+                TickFrequency="1"
+                Value="{Binding SliderValue, Mode=OneWayToSource}" />
+        </StackPanel>
+
+        <TextBlock
+            HorizontalAlignment="Center"
+            FontSize="24"
+            FontWeight="Bold">
+            <Run Text="Value1 * Value2 = " />
+            <!--  ◆Ava: [Binding]Error が発生してるようで 出力 に表示されます  -->
+            <Run Text="{Binding Answer, Mode=OneWay}" TextDecorations="Underline" />
+        </TextBlock>
+
+    </DockPanel>
+
+</Window>
