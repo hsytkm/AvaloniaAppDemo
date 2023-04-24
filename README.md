@@ -32,9 +32,12 @@
 
 - SinglePublish の Windows.exeファイルサイズが Avalonia: 86MByte, WPF: 155MByte で、Avalonia の方が 45% くらい縮んでいてビビった。
 - Avalonia だと Windows で絵文字がカラー表示される。
+- 11.0 は Preview なのでバージョンアップでビルドエラーなることが多い → [Breaking Changes](https://github.com/AvaloniaUI/Avalonia/wiki/Breaking-Changes)
 
 ## References
 
 [Welcome - Avalonia UI](https://docs.avaloniaui.net/)
 
 [AvaloniaUI/Avalonia: A cross-platform UI framework for .NET - Github](https://github.com/AvaloniaUI/Avalonia)
+
+[Breaking Changes - AvaloniaUI/Avalonia Wiki](https://github.com/AvaloniaUI/Avalonia/wiki/Breaking-Changes)

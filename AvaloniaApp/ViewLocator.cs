@@ -6,7 +6,7 @@ namespace AvaloniaApp;
 
 public sealed class ViewLocator : IDataTemplate
 {
-    public IControl Build(object? data)
+    public Control? Build(object? data)
     {
         ArgumentNullException.ThrowIfNull(data, nameof(data));
 

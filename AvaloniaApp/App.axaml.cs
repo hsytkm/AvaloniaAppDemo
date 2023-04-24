@@ -1,7 +1,6 @@
 ﻿using AppViewModels;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using AvaloniaApp.Views;
@@ -21,7 +20,8 @@ public partial class App : Application
         {
             // Line below is needed to remove Avalonia data validation.
             // Without this line you will get duplicate validations from both Avalonia and CT
-            ExpressionObserver.DataValidators.RemoveAll(static x => x is DataAnnotationsValidationPlugin);
+            // [[Preview 5] ExpressionObserver class is no longer accessible · AvaloniaUI/Avalonia · Discussion #10239](https://github.com/AvaloniaUI/Avalonia/discussions/10239#discussioncomment-4884054)
+            BindingPlugins.DataValidators.RemoveAt(0);
 
             desktop.MainWindow = new MainWindow
             {
