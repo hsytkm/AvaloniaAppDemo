@@ -61,6 +61,7 @@
 
         <TextBlock
             HorizontalAlignment="Center"
+            DockPanel.Dock="Top"
             FontSize="24"
             FontWeight="Bold">
             <Run Text="Value1 * Value2 = " />
@@ -68,6 +69,7 @@
             <Run Text="{Binding Answer, Mode=OneWay}" TextDecorations="Underline" />
         </TextBlock>
 
+        <TextBox />
     </DockPanel>
 
 </Window>

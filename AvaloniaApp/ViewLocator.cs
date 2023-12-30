@@ -12,10 +12,14 @@ public sealed class ViewLocator : IDataTemplate
 
         var name = data.GetType().FullName!.Replace("ViewModel", "View");
 
-        if (Type.GetType(name) is { } type)
-            return (Control)Activator.CreateInstance(type)!;
+#pragma warning disable IL2057 // Unrecognized value passed to the parameter of method. It's not possible to guarantee the availability of the target type.
+        var type = Type.GetType(name);
+#pragma warning restore IL2057 // Unrecognized value passed to the parameter of method. It's not possible to guarantee the availability of the target type.
 
-        return new TextBlock { Text = "Not Found: " + name };
+        if (type is null)
+            return new TextBlock { Text = "Not Found: " + name };
+
+        return (Control)Activator.CreateInstance(type)!;
     }
 
     public bool Match(object? data)

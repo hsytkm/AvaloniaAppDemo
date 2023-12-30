@@ -8,6 +8,9 @@
     </Application.DataTemplates>
 
     <Application.Styles>
+        <!-- SimpleTheme だと publish に失敗しました。(FluentTheme ならOK) 原因は不明です。
         <SimpleTheme />
+        -->
+        <FluentTheme />
     </Application.Styles>
 </Application>

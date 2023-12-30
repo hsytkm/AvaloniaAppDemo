@@ -5,11 +5,16 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csproj", "{259576F5-5341-42CE-9C3E-DA51C65F50A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppViewModels", "AppViewModels\AppViewModels.csproj", "{C594BBDE-B02D-4116-BD4F-6562DD3E096D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppViewModels", "AppViewModels\AppViewModels.csproj", "{C594BBDE-B02D-4116-BD4F-6562DD3E096D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppModels", "AppModels\AppModels.csproj", "{0DD52685-9A53-45C3-8EFF-9D5F76E06EBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppModels", "AppModels\AppModels.csproj", "{0DD52685-9A53-45C3-8EFF-9D5F76E06EBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApp", "AvaloniaApp\AvaloniaApp.csproj", "{844AA370-1649-4D11-B443-C47852F8CFAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaApp", "AvaloniaApp\AvaloniaApp.csproj", "{844AA370-1649-4D11-B443-C47852F8CFAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC535244-336A-494E-973E-4D1471302949}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
